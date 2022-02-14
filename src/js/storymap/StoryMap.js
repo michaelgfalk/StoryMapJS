@@ -78,7 +78,7 @@ class StoryMap {
 		this.data = {};
 
 		this.options = {
-      script_path: import.meta.url,
+      script_path: StoryMap.SCRIPT_PATH,
       height: this._el.container.offsetHeight,
       width: this._el.container.offsetWidth,
       layout: "landscape", // portrait or landscape
@@ -540,6 +540,12 @@ class StoryMap {
 		}
 	}
 }
+
+// TODO. what is this?
+//(function(_) {
+//  var scripts = document.getElementsByTagName("script"),
+//    		src = scripts[scripts.length-1].src;
+//  _.SCRIPT_PATH = src.substr(0,src.lastIndexOf("/"));
 
 classMixin(StoryMap, Events)
 export { StoryMap }
